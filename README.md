@@ -1,13 +1,7 @@
 # 🛠️ PHP Mini Project - MVC + ORM mini project
 
-A lightweight PHP project following the **[SOLID](https://en.wikipedia.org/wiki/SOLID) principles** with PSR-4 autoloading and a basic routing system - similar to micro-frameworks like Slim or Laravel, but without using any full-stack framework.
+A lightweight Mini PHP project following the MVC pattern with PSR-4 autoloading and a basic routing system - similar to micro-frameworks like Slim or Laravel, but without using any full-stack framework.
 
----
-## ✅ What is SOLID?
-**SOLID** is an acronym for five design principles in object-oriented programming that help you write maintainable, scalable, and robust code.
-
-
----
 ## 🚀 Features
 
 This is a minimal PHP MVC framework-style project that demonstrates:
@@ -26,15 +20,13 @@ This is a minimal PHP MVC framework-style project that demonstrates:
 - ✅ MVC pattern with views/layouts
 - ✅ Form validation and error handling
 - ✅ Registration and login system (using PHP Sessions or simple logic)
----
+
 ## ⚙️ Requirements
 
 - PHP 8+
 - Composer
 - MySQL or SQLite
 - Apache/Nginx (or use PHP's built-in server)
-
----
 
 ## 📁 Project Directory Structure
 ```bash
@@ -79,7 +71,7 @@ php composer.phar install # or update
 ```
 
 > 💡 Make sure you have `composer.phar` in your project root if Composer is not globally installed. Attached composer compatibility for PHP 7.2+ users
----
+
 
 ## 🌐 Access in Browser
 
@@ -95,11 +87,13 @@ Then open in browser:
 
 -- Above two just for demostartion proposes.
 
----
 
 ## 🔁 Routing (routes/web.php)
 
 ```php
+$router->get('/register', 'UserController@registerForm');
+$router->get('/login', 'UserController@loginForm');
+
 $router->post('/register', 'UserController@register');
 $router->post('/login', 'UserController@login');
 
